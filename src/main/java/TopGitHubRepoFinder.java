@@ -1,7 +1,5 @@
-
 import org.json.JSONArray;
 import org.json.JSONObject;
-
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
@@ -11,8 +9,9 @@ import java.net.URL;
 public class TopGitHubRepoFinder
 {
     public static void main(String[] args) {
-        String output  = new TopGitHubRepoFinder().getUrlContents("https://api.github.com/search/repositories?q=google&sort=stars&order=desc");
-        new TopGitHubRepoFinder().parseThisJson(output);
+        TopGitHubRepoFinder repoFinder = new TopGitHubRepoFinder();
+        String output  = repoFinder.getUrlContents("https://api.github.com/search/repositories?q=json&sort=stars&order=desc");
+        repoFinder.parseThisJson(output);
 
     }
 
