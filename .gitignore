@@ -2,3 +2,5 @@
 **/.idea/tasks.xml
 target/classes
 file.txt
+*.iml
+.idea
